@@ -1,0 +1,25 @@
+#top{
+    background-color: darkred;
+    font: Helvetica;
+    font-size: 24pt;
+    color: white;
+    text-align: right;
+}
+
+#middle{
+    background-color: pink;
+    font: Helvetica;
+    font-size: 18pt;
+    color: black;
+}
+
+#bottom{
+    background-color: pink;
+    font: Helvetica;
+    font-size: 12pt;
+    color: black;
+}
+
+.page{
+    background-color: lightblue;
+}
