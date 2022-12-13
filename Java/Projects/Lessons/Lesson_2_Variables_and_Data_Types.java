@@ -9,6 +9,7 @@ public class Lesson_2_Variables_and_Data_Types {
         // When creating a variable, we must first define what type of variable it will be
         // Java does not allow for variables to change data types after they are set
         // Note that variables must not contain spaces or special characters (excluding underscores)
+        // Variables are used to store data at a known place in the computer's memory for later use
 
         // Declaring and Defining an Integer (Whole number)
         int integer1 = 5;
@@ -48,5 +49,11 @@ public class Lesson_2_Variables_and_Data_Types {
                                              // Sufficient for storing 15 decimal digits
         boolean bool2 = false; // Stores true or false values
         char character2 = 'h'; // Stores a single character/letter or ASCII values
+
+        // Variables can also be declared and defined separately
+        int x;
+        x = 6;
+
+        // This applies to pretty much any data type
     }
 }
