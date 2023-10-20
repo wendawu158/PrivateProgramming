@@ -1,29 +1,24 @@
-class Something:
+def getNumber():
 
-    numberOfThings = 0
+   n = int(input("Enter a number : "))
 
-    def __init__(self, j):
-        self.hello = j
-        Something.numberOfThings += 1
-
-    @classmethod
-    def createWithoutHello(cls):
-        cls.numberOfThings += 1
-        return cls("Hello")
-
-    @staticmethod
-    def createNotWithHello():
-        Something.numberOfThings = 0
-
-    def __str__(self):
-        return str("No string value")
+   return n
 
 
-i = Something(1)
+def findIfPrime(n):
 
-k = Something.createWithoutHello()
+   isPrime = True
 
-Something.createNotWithHello()
+   for i in range(n):
+       if n % i == 0:
+          is
 
 
-print(str(i))
+
+def main():
+   number = getNumber()
+   isPrime = findIfPrime(number)
+   display(isPrime)
+
+
+main()

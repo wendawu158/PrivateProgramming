@@ -24,7 +24,7 @@ while True:
 
     print("Downloading...")
     out_file = ys.download(
-        'C:/Users/Administrator/PycharmProjects/Python code/Projects/Mini Projects/Youtube downloader/Videos'
+        'Videos'
     )
     print("Download completed!!!")
 

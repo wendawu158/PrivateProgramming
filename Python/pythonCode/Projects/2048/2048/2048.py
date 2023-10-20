@@ -183,6 +183,7 @@ class Square:
             screen.blit(self.text, self.text_rect)
 
 # Made by Wenda Wu, Copyright 2020
+
 Squares = []
 
 x = 20
