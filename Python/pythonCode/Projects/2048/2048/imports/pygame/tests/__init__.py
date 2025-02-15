@@ -15,7 +15,7 @@ individual parts of Pygame. Each can also be run as a main program. This is
 useful if the test, such as cdrom_test, is interactive.
 
 For Pygame development the test suite can be run from a Pygame distribution
-root directory using run_tests.py. Alternately, test/__main__.py can be run
+root directory using run_tests.py. Alternately, test/cmd application.py can be run
 directly.
 
 """

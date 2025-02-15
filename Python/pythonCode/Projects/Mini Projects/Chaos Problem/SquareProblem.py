@@ -8,6 +8,19 @@ tipPoint = (0, 1000)
 tip2Point = (1000, 1000)
 
 
+def midpoint(p1, p2, factor=1/2):
+    return (
+        (p1[0] + p2[0]) * factor,
+        (p1[1] + p2[1]) * factor
+            )
+
+
+originBaseMid = midpoint(origin, basePoint)
+originTipMid = midpoint(origin, tipPoint)
+tip2BaseMid = midpoint(tip2Point, basePoint)
+tip2TipMid = midpoint(tip2Point, tipPoint)
+
+
 def area(p1, p2, p3):
     return abs(
         (
@@ -58,37 +71,20 @@ while running:
             running = False
             break
 
-    pointOriginMid = (
-        point[0] - 0.5 * (point[0] - origin[0]),
-        point[1] - 0.5 * (point[1] - origin[1])
-    )
-    pointBaseMid = (
-        point[0] - 0.5 * (point[0] - basePoint[0]),
-        point[1] - 0.5 * (point[1] - basePoint[1])
-    )
-    pointTipMid = (
-        point[0] - 0.5 * (point[0] - tipPoint[0]),
-        point[1] - 0.5 * (point[1] - tipPoint[1])
-    )
-    pointTip2Mid = (
-        point[0] - 0.5 * (point[0] - tip2Point[0]),
-        point[1] - 0.5 * (point[1] - tip2Point[1])
-    )
+    midpoints = (midpoint(origin, point, factor=2/3),
+                 midpoint(basePoint, point, factor=2/3),
+                 midpoint(tipPoint, point, factor=2/3),
+                 midpoint(tip2Point, point, factor=2/3),
+                 midpoint(originBaseMid, point, factor=2/3),
+                 midpoint(originTipMid, point, factor=2/3),
+                 midpoint(tip2BaseMid, point, factor=2/3),
+                 midpoint(tip2TipMid, point, factor=2/3)
+                 )
 
-    pointDirection = random.randint(1, 4)
+    pointDirection = random.randint(0, 7)
 
-    if pointDirection == 1:
-        pygame.draw.line(screen, (0, 0, 0), pointOriginMid, pointOriginMid)
-        point = pointOriginMid
-    elif pointDirection == 2:
-        pygame.draw.line(screen, (0, 0, 0), pointBaseMid, pointBaseMid)
-        point = pointBaseMid
-    elif pointDirection == 3:
-        pygame.draw.line(screen, (0, 0, 0), pointTipMid, pointTipMid)
-        point = pointTipMid
-    else:
-        pygame.draw.line(screen, (0, 0, 0), pointTip2Mid, pointTip2Mid)
-        point = pointTip2Mid
+    pygame.draw.line(screen, (0, 0, 0), midpoints[pointDirection], midpoints[pointDirection])
+    point = midpoints[pointDirection]
 
     pygame.display.update()
 

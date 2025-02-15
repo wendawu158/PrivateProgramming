@@ -31,7 +31,7 @@ while True:
     if A == (A1 + A2 + A3):
         break
 
-pointDirection = random.randint(1,3)
+pointDirection = random.randint(1, 3)
 
 pygame.init()
 
@@ -68,6 +68,12 @@ while running:
     )
 
     pointDirection = random.randint(1, 3)
+
+    '''
+    pointDirection = random.randint(1, 5)
+    if pointDirection >= 4:
+        pointDirection = 1
+    '''
 
     if pointDirection == 1:
         pygame.draw.line(screen, (0, 0, 0), pointOriginMid, pointOriginMid)

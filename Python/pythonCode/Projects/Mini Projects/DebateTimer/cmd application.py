@@ -53,7 +53,7 @@ if __name__ == '__main__':
         # Playing the actual files
         for counter in range(len(fileNames)):
 
-            sound = AudioSegment.from_wav("Audio files/" + fileNames[counter])
+            sound = AudioSegment.from_wav("Files/Audio files/" + fileNames[counter])
             sound = sound.speedup(1.2)
             sound = sound.set_sample_width(2)
             play(sound)
@@ -66,8 +66,4 @@ if __name__ == '__main__':
 
         # Stores the new passedTime
         passedTime = float(seconds + minutes * 60)
-
-
-
-
 

@@ -1,24 +1,6 @@
-def getNumber():
+import os
+command = "start cmd /K echo "
+for i in range(0,5):
+    command += str(i+1)
 
-   n = int(input("Enter a number : "))
-
-   return n
-
-
-def findIfPrime(n):
-
-   isPrime = True
-
-   for i in range(n):
-       if n % i == 0:
-          is
-
-
-
-def main():
-   number = getNumber()
-   isPrime = findIfPrime(number)
-   display(isPrime)
-
-
-main()
+os.system(command)
